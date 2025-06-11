@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cuidado del Medio Ambiente</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4fff0;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 130px;
+      background-color: #ffffff;
+      z-index: 1000;
+      overflow: hidden;
+    }
+
+    header img {
+      width: 100vw;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    main {
+      display: flex;
+      margin-top: 130px; /* altura del banner */
+      height: calc(100vh - 130px);
+    }
+
+    nav {
+      width: 20%;
+      background-color: #4CAF50;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+
+    nav button {
+      width: 90%;
+      padding: 12px;
+      border: none;
+      border-radius: 10px;
+      background-color: #81C784;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    nav button:hover {
+      background-color: #66BB6A;
+    }
+
+    section {
+      width: 60%;
+      background-color: #E8F5E9;
+      padding: 20px;
+      overflow-y: auto;
+      height: 100%;
+    }
+
+    #subtitulo {
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    #contenido p {
+      font-size: 16px;
+      text-align: justify;
+      margin-top: 10px;
+    }
+
+    #contenido video,
+    #contenido audio,
+    #contenido img {
+      width: 100%;
+      margin-top: 20px;
+      border-radius: 8px;
+    }
+
+    aside {
+      width: 20%;
+      background-color: #C8E6C9;
+      padding: 20px;
+    }
+
+    aside img {
+      width: 100%;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="banner.jpg" alt="Cuidado del Medio Ambiente">
+  </header>
+
+  <main>
+    <nav>
+      <button onclick="cargarContenido('menu')">Menú Principal</button>
+      <button onclick="cargarContenido('reforestacion')">Reforestación</button>
+      <button onclick="cargarContenido('limpieza_institucional')">Limpieza Institucional</button>
+      <button onclick="cargarContenido('limpieza_externa')">Limpieza Externa</button>
+      <button onclick="cargarContenido('flora_fauna')">Flora y Fauna</button>
+    </nav>
+
+    <section>
+      <div id="subtitulo">
+        <h2>Bienvenido</h2>
+      </div>
+      <div id="contenido">
+        <p>Haz clic en los botones para conocer más sobre el cuidado y preservación del medio ambiente.</p>
+      </div>
+    </section>
+
+    <aside>
+      <img src="imagen1.jpg" alt="Decoración">
+    </aside>
+  </main>
+
+  <script>
+    function cargarContenido(seccion) {
+      const subtitulo = document.querySelector("#subtitulo h2");
+      const contenido = document.getElementById("contenido");
+      contenido.style.opacity = 0;
+
+      setTimeout(() => {
+        if (seccion === "menu") {
+          subtitulo.textContent = "Menú Principal";
+          contenido.innerHTML = `
+            <p>🌱 ¡Bienvenido a [la reforestacion]! 🌿
+Gracias por visitarnos. Aquí trabajamos cada día por un futuro más verde, restaurando bosques, sembrando vida y cuidando nuestro planeta.
+Explora, aprende y únete a nuestra misión de reforestar el mundo, un árbol a la vez. 🌎💚</p>
+              <li>🌿 ¡tuvimos una excursion a vio parque estrella tuvimos  una experiencia que marcará  corazónes y conciencias! 🌳
+fuimos al Bioparque Estrella con los ojos y el alma abiertos, para aprender, reflexionar y reconectar con la naturaleza.
+Sé que cada encuentro con un animal, cada árbol que vea y cada paso que dé, me recordará lo valioso que es cuidar nuestro planeta.
+No es solo una excursión… es una oportunidad para ser parte del cambio que el mundo necesita. 💚🌍
+
+¡Vamos juntos a sembrar conciencia!<li/>
+                <li>durante nuestra visita tubimos la oportunudad de ber a mas de 500 animales que viven 
+                  en linertad en el safari serengeti<li/>
+            <video width="150" height="360" controls>
+              <source src="e:\VID_20250516_163902.mp4" type="video/mp4">
+              Tu navegador no soporta la reproducción de video.
+            </video>
+          `;
+        } else if (seccion === "reforestacion") {2
+          subtitulo.textContent = "Reforestación";
+          contenido.innerHTML = `
+            <p>
+              <li>1. Planificación y Estudio de Campo:
+Realizar un estudio detallado del terreno, considerando el tipo de suelo, la topografía, 
+la exposición al sol y la presencia de humedad. 
+Identificar las especies nativas adecuadas para el área y la época del año. 
+Obtener los permisos necesarios para llevar a cabo la reforestación. </li></p>
+
+<p><li>2. Preparación del Terreno:
+Eliminar malezas y vegetación no deseada para evitar competencia con los nuevos árboles. 
+Aflojar y enriquecer el suelo con materia orgánica, si es necesario. 
+Preparar los hoyos de plantación, de tamaño adecuado para las raíces de los árboles.</li></P>
+
+<p><li>3. Siembra o Plantación:
+Plantación con semillas o plantones, dependiendo de la especie y las condiciones del terreno. 
+Colocar los árboles en los hoyos preparados, asegurándose de que las raíces estén cubiertas 
+y el suelo bien compactado. </li></p>
+
+<p><li>4. Seguimiento y Mantenimiento:
+Realizar un seguimiento periódico de los árboles para detectar cualquier problema 
+(plagas, enfermedades, falta de humedad). Aplicar medidas de protección, como cercas o
+ tutores, para evitar que los animales se los coman o pisoteen. 
+Realizar podas y limpiezas si es necesario</li> .</p>
+            <audio controls>
+              <source src="audio1.mp3" type="audio/mpeg">
+              Tu navegador no puede reproducir este archivo de audio.
+            </audio>
+          `;
+        } else if (seccion === "limpieza_institucional") {
+          subtitulo.textContent = "Limpieza Institucional";
+          contenido.innerHTML = `
+            <p>🧹 Descripción de la limpieza institucional realizada</p>
+
+
+             <p>Como parte de nuestro compromiso con el medio ambiente y en el marco del proyecto 
+               de reforestación y concientización ecológica, se llevó a cabo una jornada de limpieza 
+               institucional en nuestras instalaciones el día [20 de mayo].</p>
+
+<p>Durante esta actividad, se realizaron las siguientes acciones:</p>
+
+<p><li>Recolección y separación de residuos sólidos (orgánicos, reciclables y no reciclables) 
+  en áreas comunes, salones, patios y zonas verdes.</p></li>
+
+<p><li>Limpieza profunda de jardines y áreas verdes con retiro de hojas secas, ramas caídas y 
+desechos inorgánicos.</p></li>
+
+<p><li>Clasificación adecuada de residuos para su posterior disposición o reciclaje, fomentando la 
+práctica de las 3R: reducir, reutilizar y reciclar.</p></li>
+
+<p><li>Sensibilización entre los participantes sobre la importancia del orden y la limpieza como base
+ del respeto por el entorno natural.</p></li>
+
+<p><li>Colocación de señalizaciones para promover el correcto uso de los espacios y el mantenimiento
+ de las áreas limpias.
+Esta jornada no solo contribuyó al embellecimiento del entorno, sino que también fortaleció 
+el sentido de pertenencia y responsabilidad ambiental entre todos los miembros de la comunidad.</p>
+            <img src="E:\IMG_20250530_101328565_HDR.jpg" alt="Limpieza institucional" width="130" height="360"> 
+          `;
+        } else if (seccion === "limpieza_externa") {
+          subtitulo.textContent = "Limpieza Externa";
+          contenido.innerHTML = `
+            <p>La limpieza de áreas externas, como banquetas o parques, fortalece el compromiso social de los jóvenes con la comunidad y el entorno urbano Como parte de las acciones del proyecto de concientización ambiental y compromiso 
+          con nuestro entorno, se llevó a cabo una jornada de limpieza externa el día [21 de mayo],
+           enfocada en las áreas que rodean la institución</p>
+               
+  
+           <P> "🧹 Descripción de la limpieza externa realizada"</p>
+
+
+<p><li>Recolección de basura y residuos sólidos en banquetas, calles aledañas, áreas verdes 
+  y zonas públicas cercanas a la institución.</p></li>
+
+<p><li>Clasificación y separación de residuos reciclables y no reciclables.</p></li>
+
+<p><li>Barrido general de calles y espacios peatonales para mejorar el aspecto urbano 
+y la seguridad ambiental.</p></li>
+
+<p><li>Limpieza de jardineras, retiro de maleza y hojas secas.</p></li>
+
+<p><li>Sensibilización entre los participantes sobre la importancia del cuidado del entorno
+ público y su impacto en la comunidad.</p></li>
+
+<p><li>Esta jornada fomentó valores como la responsabilidad, el trabajo en equipo y el respeto 
+por el espacio común, además de contribuir directamente a mejorar la imagen y salubridad del entorno.</p></li>
+            <img src="e:\img src=.jpg" alt="Limpieza comunitaria">
+          `;
+        } else if (seccion === "flora_fauna") {
+          subtitulo.textContent = "Flora y Fauna";
+          contenido.innerHTML = `
+            <p>🌿🦜  observación de flora y fauna</p>
+
+<P>Durante nuestra participación en el proyecto de concientización ambiental, se llevó a
+ cabo una actividad enfocada en la observación, identificación y valoración de la flora 
+ y fauna local, con el propósito de fortalecer el vínculo con la naturaleza y fomentar su protección.</p></li>
+
+🌱 Flora:
+<p><li>Se identificaron diversas especies de árboles, arbustos y plantas nativas,
+   destacando su importancia ecológica como generadoras de oxígeno y refugio natural.</p></li>
+
+<p><li>Se explicó la función de la vegetación en el equilibrio de los ecosistemas,
+   la prevención de la erosión del suelo y su papel en el ciclo del agua.</p></li>
+
+<p><li>Se realizaron dinámicas educativas para reconocer especies endémicas y
+   valorar su conservación.</p></li>
+
+🐦 Fauna:
+<p><li>Durante el recorrido se observaron aves, insectos, reptiles y pequeños mamíferos
+   en su hábitat natural.</p></li>
+
+<p><li>Se promovió el respeto por la vida silvestre, evitando ruidos, basura o 
+  interferencia con los animales.</></li>
+
+<p><li>Se compartió información sobre especies en riesgo, su comportamiento y su 
+  contribución al equilibrio natural.</p></li>
+            <video width="150" height="360" controls>
+              <source src="e:\VID-20250518-WA0007.mp4" type="video/mp4">
+              Tu navegador no soporta la reproducción de video.
+            </video>
+          `;
+        }
+
+        contenido.style.opacity = 1;
+      }, 300);
+    }
+  </script>
+
+</body>
+</html>
